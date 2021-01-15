@@ -343,7 +343,22 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonSumaActionPerformed
 
     private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
-        escribeNumeroEnPantalla("=");
+        //el boton igual tiene que saber que operación se pulsó
+        //como ese valor lo guardé en la variable operación,
+        //monto un if para que dependiendo del valorrealize
+        //la operación correspondiente
+        
+       //primerp guardo lo que haya en la pantalla en una variable double
+        double operando2 = Double.valueOf(display.getText());
+        //si la operacion era la misma
+        if (operacion.equals("+")){
+            operando1 = operando1 + operando2;
+        }
+        
+        //por último, muestro el resultado por pantalla
+        display.setText( String.valueOf(operando1));
+        
+        
     }//GEN-LAST:event_botonIgualActionPerformed
 
     private void botonPorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPorActionPerformed
