@@ -20,6 +20,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
      */
     public VentanaCalculadora() {
         initComponents();
+        
     }
     
     public void escribeNumeroEnPantalla(String numero){
@@ -32,7 +33,17 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         
     }
     
-    
+    //la función que se encarga de trabajar con la operación pulsada
+    public void operacionPulsada( String _operacion){
+        //guardo el valor de la pantalla en la variable operando1
+        operando1 = Double.valueOf(display.getText());
+        
+        //pongo a cero la pantalla
+        display.setText("0");
+        
+        //guardo la operacion que he piulsado
+        operacion = _operacion;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -328,7 +339,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonRestaActionPerformed
 
     private void botonSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSumaActionPerformed
-        escribeNumeroEnPantalla("+");
+        operacionPulsada("+");
     }//GEN-LAST:event_botonSumaActionPerformed
 
     private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
