@@ -30,7 +30,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         else{
             display.setText(display.getText() + numero);
         }
-        
     }
     
     //la función que se encarga de trabajar con la operación pulsada
@@ -354,10 +353,25 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         if (operacion.equals("+")){
             operando1 = operando1 + operando2;
         }
+        double operando3 = Double.valueOf(display.getText());
+        if (operacion.equals("-")){
+            operando1 = operando1 - operando3; 
+        }
+        double operando4 = Double.valueOf(display.getText());
+        if (operacion.equals("/")){
+            operando1 = operando1 / operando4; 
+        }
+        double operando5 = Double.valueOf(display.getText());
+        if (operacion.equals("*")){
+            operando1 = operando1 * operando5; 
+        }
         
         //por último, muestro el resultado por pantalla
         display.setText( String.valueOf(operando1));
-        
+         display.setText( String.valueOf(operando1));
+          display.setText( String.valueOf(operando1));
+           display.setText( String.valueOf(operando1));
+            
         
     }//GEN-LAST:event_botonIgualActionPerformed
 
